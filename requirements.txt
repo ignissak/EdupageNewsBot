@@ -1,0 +1,7 @@
+SQLAlchemy~=1.4.27
+APScheduler~=3.8.1
+envparse~=0.2.0
+requests~=2.25.1
+beautifulsoup4~=4.9.3
+markdownify~=0.9.4
+discord_webhook~=0.14.0
