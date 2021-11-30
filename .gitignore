@@ -3,3 +3,4 @@ venv/
 bot-env/
 *.iml
 .idea/
+__pycache__/
