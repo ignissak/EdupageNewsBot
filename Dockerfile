@@ -7,7 +7,7 @@ RUN pip3 install -r requirements.txt
 
 COPY . .
 
-CMD ["python" "-m", "main.py"]
+CMD ["python3", "-m", "main.py"]
 
 # FROM python:3.6
 

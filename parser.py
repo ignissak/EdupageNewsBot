@@ -35,6 +35,7 @@ class EdupageNewsParser:
 
         news_in_db = self.database.get_news_by_id(id)
         if news_in_db is not None:
+            print(id, "is printed, skipping...")
             return
 
         print("Printing " + id)
@@ -90,7 +91,15 @@ class EdupageNewsParser:
     def get_all_news(self):
         page = self.get_formatted_page()
 
+        l = []
+
         for ul_tag in page.find_all('ul', {'id': 'news_News_1'}):
             for li_tag in ul_tag.find_all('li',
                                           {'class': 'skgd skgdli-news_ListItem_1-news_ListItem_1 composite skgdLi'}):
-                self.send_news(li_tag)
+
+                                          l.append(li_tag)
+        
+        l.reverse()
+
+        for li_tag in l:
+            self.send_news(li_tag)
